@@ -221,7 +221,7 @@ export default function Home() {
               custom={80}
               style={{ fontSize: "70px" }}
             >
-              Optimalisasi Aksesibilitas dan Konektivitas Smelter Nikel
+              Strategi Penguatan Konektivitas dan Aksesibilitas Potensi Industri Pengolahan Pertambangan Sulawesi Tenggara dengan Aglomerasi Industri: Pendekatan Geospatial Big Data dan Official Statistics
             </motion.h1>
           </motion.div>
           <br /><br />

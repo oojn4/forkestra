@@ -7,8 +7,8 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aksesibilitas dan Konektivitas Smelter Nikel",
-  description: "Aksesibilitas dan Konektivitas Smelter Nikel",
+  title: "Strategi Penguatan Konektivitas dan Aksesibilitas Potensi Industri Pengolahan Pertambangan Sulawesi Tenggara dengan Aglomerasi Industri: Pendekatan Geospatial Big Data dan Official Statistics",
+  description: "Strategi Penguatan Konektivitas dan Aksesibilitas Potensi Industri Pengolahan Pertambangan Sulawesi Tenggara dengan Aglomerasi Industri: Pendekatan Geospatial Big Data dan Official Statistics",
 };
 
 export default function RootLayout({
