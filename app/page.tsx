@@ -221,7 +221,15 @@ export default function Home() {
               custom={80}
               style={{ fontSize: "50px" }}
             >
-              Strategi Penguatan Konektivitas dan Aksesibilitas Potensi Industri Pengolahan Pertambangan Sulawesi Tenggara dengan Aglomerasi Industri: Pendekatan Geospatial Big Data dan Official Statistics
+              Strategi Penguatan Konektivitas dan Aksesibilitas Potensi Industri Pengolahan Pertambangan Sulawesi Tenggara dengan Aglomerasi Industri: 
+            </motion.h1>
+            <motion.h1
+              className={`lg:text-8xl sm:text-5xl text-xl text-yellow-200 tracking-tighter font-bold`}
+              variants={textAnimate2}
+              custom={80}
+              style={{ fontSize: "50px" }}
+            >
+              Pendekatan Geospatial Big Data dan Official Statistics
             </motion.h1>
           </motion.div>
           <br /><br />
