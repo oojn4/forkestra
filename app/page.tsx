@@ -1,10 +1,10 @@
 "use client";
-import logo from "@/public/img/Network AI Team-3.png";
-import BG from "@/public/img/Smelter-1024x576.jpg";
 import BIVARIATE from "@/public/img/bivariate_map.jpg";
 import MONEY_INFRA from "@/public/img/f2.webp";
 import logo1 from "@/public/img/forkestra.png";
-import METHODS from "@/public/img/metod.jpg";
+import METHODS from "@/public/img/ForkestraR.jpg";
+import logo from "@/public/img/Network AI Team-3.png";
+import BG from "@/public/img/Smelter-1024x576.jpg";
 import { Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { Pacifico } from "next/font/google";
