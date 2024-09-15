@@ -72,6 +72,26 @@ const kabkotData = [
   { x: -25.97746, y: 2.09533925, label: 'Kota Baubau', status: 'Zona Padat' }
 ];
 
+const lqData = [
+  { lq: 1.456, label: 'Kabupaten Buton', status: 'Sudah Teraglomerasi' },
+  { lq: 0.0, label: 'Kabupaten Muna', status: 'Tidak Teraglomerasi' },
+  { lq: 0.072, label: 'Kabupaten Konawe', status: 'Tidak Teraglomerasi' },
+  { lq: 1.620, label: 'Kabupaten Kolaka', status: 'Sudah Teraglomerasi' },
+  { lq: 1.433, label: 'Kabupaten Konawe Selatan', status: 'Sudah Teraglomerasi' },
+  { lq: 5.786, label: 'Kabupaten Bombana', status: 'Sudah Teraglomerasi' },
+  { lq: 0.0, label: 'Kabupaten Wakatobi', status: 'Tidak Teraglomerasi' },
+  { lq: 0.383, label: 'Kabupaten Kolaka Utara', status: 'Tidak Teraglomerasi' },
+  { lq: 0.460, label: 'Kabupaten Buton Utara', status: 'Tidak Teraglomerasi' },
+  { lq: 4.406, label: 'Kabupaten Konawe Utara', status: 'Sudah Teraglomerasi' },
+  { lq: 0.0, label: 'Kabupaten Kolaka Timur', status: 'Tidak Teraglomerasi' },
+  { lq: 0.0, label: 'Kabupaten Konawe Kepulauan', status: 'Tidak Teraglomerasi' },
+  { lq: 0.0, label: 'Kabupaten Muna Barat', status: 'Tidak Teraglomerasi' },
+  { lq: 0.0, label: 'Kabupaten Buton Tengah', status: 'Tidak Teraglomerasi' },
+  { lq: 0.0, label: 'Kabupaten Buton Selatan', status: 'Tidak Teraglomerasi' },
+  { lq: 1.217, label: 'Kota Kendari', status: 'Sudah Teraglomerasi' },
+  { lq: 0.0, label: 'Kota Baubau', status: 'Tidak Teraglomerasi' }
+];
+
 const pieLabels = ['B Pertambangan dan Penggalian', 'C Industri Pengolahan', 'F Konstruksi', 'A Pertanian,Kehutanan,dan Perikanan', 'G Perdagangan', 'Lainnya'];
 const pieDatasetLabel = 'PDRB';
 const pieData = [21.08, 6.47, 14.03, 22.95, 12.76, 4.89];
@@ -145,6 +165,12 @@ export default function Home() {
             >
               Kabupaten/Kota Potensi Pengembangan Perusahaan Industri Pengolahan Pertambangan
             </button>
+            <button
+              className={`px-4 py-2 font-semibold ${activeTab === "aglomerasi" ? "bg-yellow-200 text-gray-800" : "bg-gray-800 text-yellow-200"}`}
+              onClick={() => setActiveTab("aglomerasi")}
+            >
+              Evaluasi Aglomerasi Industri Pengolahan Pertambangan 
+            </button>
           </div>
 
           {/* Tab Content */}
@@ -176,7 +202,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          ) : (
+          ) : activeTab === "kabupaten" ? (
             <div>
               {/* Content for Evaluasi Kabupaten/Kota */}
               <h2 className="pt-2 text-lg text-[#eaeaea] bg-gray-800 p-2 shadow-lg text-center">Potensi Pengembangan Perusahaan Industri Pengolahan Pertambangan</h2>
@@ -211,6 +237,23 @@ export default function Home() {
                 </div> */}
               </div>
             </div>
+          ):(
+            <div>
+              <h2 className="pt-2 text-lg text-[#eaeaea] bg-gray-800 p-2 shadow-lg text-center">Evaluasi Aglomerasi Industri Pengolahan Pertambangan </h2>
+              <iframe
+                src="https://oojn4.github.io/forkestra-lq/#7/-4.226/122.739"
+                style={{ width: '100%', height: '600px', border: 'none' }}
+                title="Location Quotient Map"
+                className="pt-8 rounded-lg"
+              />
+              <br />
+              <motion.div className="pt-8 text-lg text-[#eaeaea] bg-gray-800 p-6 shadow-lg gap-4">
+                <div style={{justifyContent: 'center' }}>
+                  <BarChart labels={[...lqData].sort((a, b) => b.lq - a.lq).map(item => item.label)} data={[...lqData].sort((a, b) => b.lq - a.lq).map(item => item.lq)} title="Location Quotient" />
+                </div>
+              </motion.div>
+            </div>
+
           )}
         </div>
       </section>
